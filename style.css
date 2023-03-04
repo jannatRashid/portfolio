@@ -1,511 +1,269 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
-}
-
-body {
-    background: black;
-    color: white;
-}
-
-#header {
-    width: 100%;
-    height: 65vh;
-
-}
-
-.container {
-    padding: 8px 8%;
-    /* width: 35%; */
-
-}
-
-.container img {
-    width: 6%;
-    /* border: 3px solid white; */
-    /* border-radius: 50px; */
-    justify-content: left;
-    margin: 0px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-.header-text {
-    margin-top: 13%;
-    font-size: 30px;
-    /* margin-left: 20%; */
-    justify-content: center;
-    /* margin-right: 20%; */
-    text-align: center;
-}
-
-.header-text h1 {
-    font-size: 70px;
-    margin-top: 30px;
-
-}
-
-.header-text p {
-    font-size: 40px;
-    margin-top: 20px;
-    /* margin-left: 20%; */
-}
-
-/* --------about-------- */
-#about {
-    padding: 80px 0;
-    color: #ababab;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-
-}
-
-.about-col-1 {
-    
-    text-align: center;
-    margin: auto;
-    margin-top: 5%;
-    justify-content: center;
-
-}
-
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-
-
-}
-
-.about-col-1 p {
-    font-size: 18px;
-    margin-top: 1.25em;
-    max-width: 100%;
-    text-align: center;
-
-}
-
-.tab-titles {
-    display: flex;
-    margin: 20px 0 40px;
-    max-width: 60%;
-    text-align: center;
-    margin: auto;
-    /* margin-left: 30%; */
-    justify-content: center;
-
-}
-
-.tab-links {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-
-}
-
-.tab-links::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s
-}
-
-.tab-links.active-links::after {
-    width: 50%;
-
-}
-
-.tab-contents {
-    margin-top: 3%;
-    justify-content: center;
-}
-
-.tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
-
-}
-
-.tab-contents ul li span {
-    font-size: 14px;
-    color: #b54769;
-    margin-top: 15%;
-}
-
-.tab-contents {
-    display: none;
-}
-
-.tab-contents.active-tab {
-    display: block;
-}
-/* -----------------services----------------- */
-#services {
-    padding: 30px 0;
-
-}
-
-.services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-
-}
-
-.services-list div {
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-}
-
-.services-list div i {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.services-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.services-list div a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.services-list div:hover {
-    background: #ff004f;
-    transform: translateY(-10px);
-}
-
-/* <!-- ---------------portfolio------------------- --> */
-#portfolio {
-    padding: 50px 0;
-
-}
-
-.work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-
-
-}
-
-.work {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.work img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    /* size: 100px; */
-    transition: transform 0.5s;
-
-}
-
-.layer {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 10px;
-    transition: height 0.5s;
-
-}
-
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 20px;
-
-}
-
-.layer a {
-    margin-top: 20px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-
-}
-
-.work:hover img {
-    transform: scale(1.1);
-}
-
-.work:hover .layer {
-    height: 100%;
-}
-
-.btn {
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-}
-
-.btn:hover {
-    background: #ff004f;
-}
-
-/* ------------------contact--------------- */
-.contact-left {
-    flex-basis: 35%;
-}
-
-.contact-right {
-    flex-basis: 60%;
-}
-
-.contact-left p {
-    margin-top: 30px;
-}
-
-.contact-left p i {
-    color: #ff004f;
-    margin-right: 15px;
-    font-size: 25px;
-}
-
-.social-icons {
-    margin-top: 30px;
-
-}
-
-.social-icons a {
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-
-}
-
-.social-icons a:hover {
-    color: #ff004f;
-    transform: translateY(-5px);
-}
-
-.btn.btn2 {
-    display: inline-block;
-    background: #ff004f;
-
-}
-
-.contact-right form {
-    width: 100%;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-
-}
-
-form .btn2 {
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.copyright {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-.copyright i {
-    color: #ff004f;
-}
-
-
-
-
-
-
-
-
-
-
-/* -----------------------css for small screens----------------- */
-nav .fa-solid {
-    display: none;
-}
-
-@media(max-width:768px) {
-    /* @media only screen and(max-width:768px) { */
-
-    /* #header{} */
-    .header-text {
-        margin-top: 50%;
-        font-size: 16px;
-        margin-bottom: 10%;
-        /* text-align: justify; */
-        /* justify-content: center; */
-        /* margin-left: 2%; */
-    }
-      .container img {
-
-        width: 8%;
-    }
-
-    .header-text h1 {
-        font-size: 40px;
-        text-align: center;
-        
-        /* justify-content: center; */
-    }
-
-    .header-text p {
-        font-size: 25px;
-        /* text-align: center; */
-        /* margin-top: -5px; */
-    }
-
-    nav .fa-solid {
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ul {
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-
-    }
-
-
-    nav ul li {
-        display: block;
-        margin: 25px;
-
-    }
-
-    nav ul .fa-solid {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-    .sub-title{
-        font-size: 30px;
-        /* margin-top: -50px; */
-    }
-    .about-col-1{
-        flex-basis: 100%;
-        /* margin-bottom: 30px; */
-        font-size: 14px;
-        justify-content: center;
-        text-align: center;
-        
-        /* margin-top: 100%; */
-    }
-    .tab-links{
-        font-size: 16px;
-        margin-right: 20px;
-    }
-    .tab-titles{
-        justify-content: center;
-    }
-    .contact-left , .contact-right{
-        flex-basis: 100%;
-    }
-    
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0de0f13ed2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo4.png" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()""></i>
+
+                </ul>
+                <i class=" fa-solid fa-bars" onclick="openmenu()"></i>
+
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi I'm Jannat Rashid </h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Jannat Rashid, a persistent Computer Science undergraduate in a well-recognized institute
+                        "University of Karachi - UBIT" having knowledge of Web Development and UI/UX Designing. I am
+                        Skilled in designing creative ui/ux designs and web pages. A technology enthusiast who believes
+                        in the technology revolution. I keep myself updated on the upcoming technologies which will
+                        revolutionize the digital world in the future and will solve modern-day life problems.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+
+                        </ul>
+                    </div>
+                    <!-- ---------education---- -->
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2020 – present</span><br>University of Karachi (UBIT)
+                            </li>
+                            <li><span>2018 – 2020 </span><br>SHAHEED-E-MILLAT GOVT COLLEGE</li>
+                            <li><span>2010 – 2018</span><br>LADY BIRD GRAMMER SCHOOL</li>
+
+
+                        </ul>
+                    </div>
+                    <!-- ---------ecperience--- -->
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Freelancer</span><br>UI/UX Designer</li>
+
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!------------------ services------------ -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-regular fa-object-ungroup"></i>
+                    <h2>UI/UX DESIGN</h2>
+                    <p>Being a UI UX designer i create the user interface for an app, website, or other interactive
+                        media.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <!-- <i class="fa-duotone fa-code"></i> -->
+                    <h2>WEB DESIGN</h2>
+                    <p>I plan, create and code internet sites and web pages, many of which combine text with sounds and
+                        pictures </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ---------------portfolio------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="skincare.png" alt="logo">
+                    <div class="layer">
+                        <h3>Beauty Store App</h3>
+                        <p>Organic Skin care eCommerce app</p>
+                        <a href="https://www.behance.net/gallery/155602507/skin-care-mobile-application"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+                <div class="work">
+                    <img src="foodapp.jpg" alt="logo">
+                    <div class="layer">
+                        <h3>Food Delivery App</h3>
+                        <p>Food Delivery app - awesome user experience</p>
+                        <a href="https://www.behance.net/gallery/164625475/food-delivery-app"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+                <div class="work">
+                    <img src="coffee.jpg" alt="logo">
+                    <div class="layer">
+                        <h3>Cafe Website</h3>
+                        <p>Great Cafe Website With Modern Website Design</p>
+                        <a href="https://coffee-shop-self.vercel.app/"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+            </div>
+            <a href="https://www.behance.net/jannatrashid01" class="btn">See More</a>
+
+        </div>
+    </div>
+    <!-- -------------------------contact------------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-envelope"></i>rashidjannat273@gmail.com </p>
+                    <p><i class="fa-sharp fa-solid fa-phone"></i>03312077013</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/UI.Arcadio"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/jannatrashid/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/jannatRashid"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/ui.arcadio/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="mycv.pdf" download class="btn btn2">Download CV</a>
+
+                    <!-- <form action="https://formsubmit.co/rashidjannat273@gmail.com" method="POST"> -->
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+
+
+                    </form>
+                    <span id="msg"> </span>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p> © Jannat Rashid <i class="fa-solid fa-heart"></i> | 2022</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("active-links");
+        var tabcontents = document.getElementsByClassName("active-tab");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-links");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwIxXkV4aQehW0a-fxuDJRLRuvt9DU1SgNy9qmaS3ymg60o64drjhzycKGQKLQHAbKB/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+
+
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
