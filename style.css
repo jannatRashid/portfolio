@@ -422,7 +422,8 @@ nav .fa-solid {
 }
 
 
-@media only screen and(max-width:600px) {
+@media(max-width:768px){
+
 
     /* #header{} */
     .header-text {
