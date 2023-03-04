@@ -69,8 +69,10 @@ nav ul li a:hover::after {
 .header-text {
     margin-top: 20%;
     font-size: 30px;
-    margin-left: 20%;
+    /* margin-left: 20%; */
+    justify-content: center;
     /* margin-right: 20%; */
+    text-align: center;
 }
 
 .header-text h1 {
@@ -82,7 +84,7 @@ nav ul li a:hover::after {
 .header-text p {
     font-size: 40px;
     margin-top: 20px;
-    margin-left: 20%;
+    /* margin-left: 20%; */
 }
 
 /* --------about-------- */
@@ -100,14 +102,11 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 {
-    /* flex-basis: 100%;
-    /* margin-top: 8%; */
-    /* margin-left: 39%;
-    margin-right: 20%; */
-    max-width: 60%;
+    
     text-align: center;
     margin: auto;
     margin-top: 2em;
+    justify-content: center;
 
 }
 
@@ -122,6 +121,8 @@ nav ul li a:hover::after {
 .about-col-1 p {
     font-size: 18px;
     margin-top: 1.25em;
+    max-width: 100%;
+    text-align: left;
 
 }
 
@@ -131,7 +132,8 @@ nav ul li a:hover::after {
     max-width: 60%;
     text-align: center;
     margin: auto;
-    margin-left: 30%;
+    /* margin-left: 30%; */
+    justify-content: center;
 
 }
 
@@ -162,11 +164,12 @@ nav ul li a:hover::after {
 
 .tab-contents {
     margin-top: 5%;
+    justify-content: center;
 }
 
 .tab-contents ul li {
     list-style: none;
-    margin: 10px 0;
+    /* margin: 10px 0; */
 
 }
 
@@ -183,7 +186,7 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
     display: block;
 }
-
+/* -----------------services----------------- */
 #services {
     padding: 30px 0;
 
@@ -421,26 +424,28 @@ nav .fa-solid {
     display: none;
 }
 
+@media(max-width:768px) {
+    /* @media only screen and(max-width:768px) { */
 
-@media(max-width:768px){
-
-
-   .header-text {
+    /* #header{} */
+    .header-text {
         margin-top: 100%;
         font-size: 16px;
         margin-bottom: 10%;
         /* text-align: justify; */
-/*         justify-content: center; */
+        /* justify-content: center; */
         /* margin-left: 2%; */
     }
 
     .header-text h1 {
-        font-size: 50px;
+        font-size: 30px;
         text-align: center;
+        
+        /* justify-content: center; */
     }
 
     .header-text p {
-        font-size: 30px;
+        font-size: 20px;
         /* text-align: center; */
         /* margin-top: -5px; */
     }
@@ -482,9 +487,10 @@ nav .fa-solid {
     .about-col-1{
         flex-basis: 100%;
         margin-bottom: 30px;
-        font-size: 15px;
-        justify-content: center;
-        /* text-align: start; */
+        font-size: 14px;
+        /* justify-content: center; */
+        /* text-align: center; */
+        
         /* margin-top: 100%; */
     }
     .tab-links{
@@ -494,4 +500,5 @@ nav .fa-solid {
     .tab-titles{
         justify-content: center;
     }
+    
 }
