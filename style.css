@@ -430,7 +430,7 @@ nav .fa-solid {
     /* #header{} */
     .header-text {
         margin-top: 50%;
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 10%;
         /* text-align: justify; */
         /* justify-content: center; */
@@ -438,14 +438,14 @@ nav .fa-solid {
     }
 
     .header-text h1 {
-        font-size: 30px;
+        font-size: 40px;
         text-align: center;
         
         /* justify-content: center; */
     }
 
     .header-text p {
-        font-size: 20px;
+        font-size: 25px;
         /* text-align: center; */
         /* margin-top: -5px; */
     }
