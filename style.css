@@ -232,7 +232,8 @@ nav ul li a:hover::after {
     /* size: 100px; */
     transition: transform 0.5s;
     
-    justify-content: center;
+       margin-left: 20%;
+
 
 }
 
